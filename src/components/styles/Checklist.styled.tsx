@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { colors, typography } from '../../styles/theme';
 
-interface ItemProps {
+export interface CheckItemProps {
     color: string;
 }
 
-export const StyledCheck = styled.div<ItemProps>`
+export const StyledCheck = styled.div<CheckItemProps>`
     display: flex;
     align-items: center;
     text-align: center;

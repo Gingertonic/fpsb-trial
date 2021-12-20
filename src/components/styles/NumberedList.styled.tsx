@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { colors, typography } from '../../styles/theme';
 
-interface ItemProps {
+export interface LiItemProps {
     color: string;
 }
 
-export const StyledLi = styled.li<ItemProps>`
+export const StyledLi = styled.li<LiItemProps>`
     display: flex;
     margin-bottom: 24px;
     flex-direction: row;

@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, Story } from '@storybook/react';
-import { Checklist, ChecklistItem, ItemProps } from "../../src/components/Checklist";
+import { Checklist, ChecklistItem, ChecklistItemProps } from "../../src/components/Checklist";
 
 const meta: Meta = {
   title: "Components/Lists/Checklist",
@@ -9,7 +9,7 @@ const meta: Meta = {
 
 export default meta
 
-const Template: Story<ItemProps> = (args) => <ChecklistItem {...args} />;
+const Template: Story<ChecklistItemProps> = (args) => <ChecklistItem {...args} />;
 
 export const Item = Template.bind({});
 Item.args = {
