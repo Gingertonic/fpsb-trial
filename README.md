@@ -17,13 +17,15 @@
 
 ## Once upon a time...
 
-...Okay so it's very small at the moment but our story begins here and we'd love you to continue it! This initial version has been put together in a Covid-19-induced stupor so be on the look out for bugs and, more excitingly, note down your ideas for new components by opening up [new issues](https://github.com/getfutureproof-projects/fpsb/issues/new) on the repo.
+...Okay so it's very small at the moment but our [story begins here](https://<branch>--61c08e2a6b3b4d003ade4a12.chromatic.com) and we'd love you to continue it! This initial version has been put together in a Covid-19-induced stupor so be on the look out for bugs and, more excitingly, note down your ideas for new components by opening up [new issues](https://github.com/getfutureproof-projects/fpsb/issues/new) on the repo.
 
 
 ## Installation
 `yarn add @getfutureproof/fpsb` or \
 `npm i @getfutureproof/fpsb`
 
+## View Storybook
+The latest Storybook can be viewed [here](https://main--61c08e2a6b3b4d003ade4a12.chromatic.com). This has extended documentation and examples on using components in the fpsb library.
 
 ## Using styles
 
@@ -66,7 +68,7 @@ const GreatComponent = () => {
 
 ## Components
 A compact selection to get us going - help us expand! \
-See the Storybook - *coming soon!* - for more extensive documentation and usage.
+See the [Storybook](https://main--61c08e2a6b3b4d003ade4a12.chromatic.com)) for more extensive documentation and usage.
 
 ### Button
 Buttons come in regular and inverted flavours
