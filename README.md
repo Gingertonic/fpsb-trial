@@ -1,4 +1,19 @@
 # fpsb [futureproof storybook]
+- [fpsb [futureproof storybook]](#fpsb-futureproof-storybook)
+  - [Once upon a time...](#once-upon-a-time)
+  - [Installation](#installation)
+  - [Using styles](#using-styles)
+    - [Global Styles](#global-styles)
+    - [Theme](#theme)
+  - [Components](#components)
+    - [Button](#button)
+    - [Heading](#heading)
+    - [Shapes](#shapes)
+      - [Solid Shapes](#solid-shapes)
+      - [Frame Shapes](#frame-shapes)
+    - [Lists](#lists)
+      - [Checklists](#checklists)
+      - [NumberedList](#numberedlist)
 
 ## Once upon a time...
 
@@ -50,23 +65,7 @@ const GreatComponent = () => {
 
 ## Components
 A compact selection to get us going - help us expand! \
-See the Storybook for more extensive documentation and usage.
-
-- [fpsb [futureproof storybook]](#fpsb-futureproof-storybook)
-  - [Once upon a time...](#once-upon-a-time)
-  - [Installation](#installation)
-  - [Using styles](#using-styles)
-    - [Global Styles](#global-styles)
-    - [Theme](#theme)
-  - [Components](#components)
-    - [Button](#button)
-    - [Heading](#heading)
-    - [Shapes](#shapes)
-      - [Solid Shapes](#solid-shapes)
-      - [Frame Shapes](#frame-shapes)
-    - [Lists](#lists)
-      - [Checklists](#checklists)
-      - [NumberedList](#numberedlist)
+See the Storybook - *coming soon!* - for more extensive documentation and usage.
 
 ### Button
 Buttons come in regular and inverted flavours
