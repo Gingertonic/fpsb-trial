@@ -5,12 +5,12 @@ import { FPColorString } from '../styles/theme';
 
 export interface ItemProps {
     /** Item text */
-    label?: string,
+    label?: string;
     /** Select color */
-    color?: FPColorString,
+    color?: FPColorString;
 }
 
-export const ChecklistItem = ({ label, color='purple' as FPColorString }: ItemProps) => {
+export const ChecklistItem = ({ label, color='purple' }: ItemProps) => {
   return (
     <StyledCheck color={color}>
         <CheckMark />

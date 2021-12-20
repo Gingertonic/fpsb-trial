@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, Story } from '@storybook/react';
-import { NumberedItem, NumberedList, ItemProps } from "../../src/components/NumberedList";
+import { NumberedItem, NumberedList, NumItemProps } from "../../src/components/NumberedList";
 
 const meta: Meta = {
   title: "Components/Lists/Numbered List",
@@ -9,7 +9,7 @@ const meta: Meta = {
 
 export default meta
 
-const Template: Story<ItemProps> = (args) => <NumberedItem {...args} />;
+const Template: Story<NumItemProps> = (args) => <NumberedItem {...args} />;
 
 
 export const Item = Template.bind({});

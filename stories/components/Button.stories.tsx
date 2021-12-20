@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Button, Props } from '../../src/components/Button';
+import { Button, BtnProps } from '../../src/components/Button';
 import { colors, FPColorString } from '../../src/styles/theme';
 
 const meta: Meta = {
@@ -13,7 +13,7 @@ const meta: Meta = {
 
 export default meta;
 
-const Template: Story<Props> = (args) => <Button {...args} />;
+const Template: Story<BtnProps> = (args) => <Button {...args} />;
 
 export const Default = Template.bind({});
 export const Inverted = Template.bind({});

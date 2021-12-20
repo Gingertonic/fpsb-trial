@@ -4,16 +4,16 @@ import { sizes, FPColorString, FPSize } from '../styles/theme';
 
 export interface Props {
     /** Heading text */
-    content?: string,
+    content?: string;
     /** Select color */
-    color?: FPColorString,
+    color?: FPColorString;
     /** Semantic size */
-    size?: FPSize,
+    size?: FPSize;
     /** h* element (alternative to `size` prop) */
-    as?: string
+    as?: string;
 }
 
-export const Heading = ({ content, as, size='medium' as FPSize, color='purple' as FPColorString }: Props) => {
+export const Heading = ({ content, as, size='medium', color='purple' }: Props) => {
   let sizeIsEl = as || size.match(/h\d$/i)
   let el = sizeIsEl ? size : sizes[size]
 

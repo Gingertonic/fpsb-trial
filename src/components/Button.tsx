@@ -2,7 +2,7 @@ import React, { HTMLAttributes } from 'react';
 import { FPColorString } from '../styles/theme';
 import { StyledButton, BtnArrow } from './styles/Button.styled';
 
-export interface Props extends HTMLAttributes<HTMLButtonElement> {
+export interface BtnProps extends HTMLAttributes<HTMLButtonElement> {
     /** required */
     label: string;
     /** Denotes external link when 'true' */
@@ -17,7 +17,7 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const Button = ({ label, href, external, className, inverted=false, colorway='purple' as FPColorString, ...props }: Props): JSX.Element => {
+export const Button = ({ label, href, external, inverted=false, colorway='purple', ...props }: BtnProps): JSX.Element => {
     let isDefault = colorway === 'purple';
     let contrast = isDefault ? 'white' : colorway;
     let bgColor: string = inverted ? contrast : 'purple';

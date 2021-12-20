@@ -5,11 +5,11 @@ import Star from '../assets/svgs/shapes/star.svg';
 import Angles from '../assets/svgs/shapes/angles.svg';
 import Cog from '../assets/svgs/shapes/cog.svg';
 
-export interface Props {
+export interface ShapeProps {
     /** Shape */
-    kind: FPShape,
+    kind: FPShape;
     /** Select color */
-    color?: FPColorString
+    color?: FPColorString;
 }
 
 const shapes: {[key: string]: React.FunctionComponent<React.SVGProps<SVGSVGElement>>}= { 
@@ -19,7 +19,7 @@ const shapes: {[key: string]: React.FunctionComponent<React.SVGProps<SVGSVGEleme
     "cog": Cog
 };
 
-export const Shape = ({ kind="angles" as FPShape, color='violet' as FPColorString }: Props) => {
+export const Shape = ({ kind="angles", color='violet' }: ShapeProps) => {
     const key: string = Object.keys(shapes).find(sh => sh === kind) || "angles"
     const ShapeType = shapes[key]
     
