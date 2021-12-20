@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, Story } from '@storybook/react';
-import { NumberedItem, NumberedList, NumItemProps } from "../../src/components/NumberedList";
+import { NumberedItem, NumberedList, NumItemProps } from "../components/NumberedList";
 
 const meta: Meta = {
   title: "Components/Lists/Numbered List",

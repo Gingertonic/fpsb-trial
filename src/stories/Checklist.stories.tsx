@@ -1,6 +1,6 @@
 import React from "react";
 import { Meta, Story } from '@storybook/react';
-import { Checklist, ChecklistItem, ChecklistItemProps } from "../../src/components/Checklist";
+import { Checklist, ChecklistItem, ChecklistItemProps } from "../components/Checklist";
 
 const meta: Meta = {
   title: "Components/Lists/Checklist",
