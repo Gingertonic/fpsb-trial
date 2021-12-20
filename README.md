@@ -21,7 +21,8 @@
 
 
 ## Installation
-`yarn add @getfutureproof/fpsb`
+`yarn add @getfutureproof/fpsb` or \
+`npm i @getfutureproof/fpsb`
 
 
 ## Using styles
