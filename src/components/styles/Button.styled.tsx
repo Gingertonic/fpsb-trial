@@ -12,8 +12,8 @@ export const StyledButton = styled.button<BtnProps>`
     display: flex;
     border: none;
     margin: 4px;
-    color: ${({ text}) => colors[text]};
-    background-color: ${({ bg}) => colors[bg]};
+    color: ${({ text }) => colors[text]};
+    background-color: ${({ bg }) => colors[bg]};
 
     .btn {
         height: 48px;

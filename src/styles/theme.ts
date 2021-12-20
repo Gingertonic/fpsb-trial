@@ -14,6 +14,8 @@ export const colors: Settings = {
 };
 
 export type FPColorString = 'purple' | 'coral' | 'lime' | 'lemon' | 'violet';
+export type FPShape = 'cog' | 'angles' | 'star' | 'shield';
+export type FPSize = 'huge' | 'xlarge' | 'large' | 'medium' | 'small' | 'tiny';
 
 
 export const spacing: Settings = {
@@ -27,6 +29,17 @@ export const spacing: Settings = {
     default: 10
   },
 };
+
+export const sizes: Settings = {
+  huge: 'h1',
+  xlarge: 'h2',
+  large: 'h3',
+  medium: 'h4',
+  small: 'h5',
+  tiny: 'h6',
+}
+
+
 
 export const typography: Settings = {
   type: {
