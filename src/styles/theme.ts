@@ -28,6 +28,18 @@ export const spacing: Settings = {
   },
 };
 
+export const sizes: Settings = {
+  huge: 'h1',
+  xlarge: 'h2',
+  large: 'h3',
+  medium: 'h4',
+  small: 'h5',
+  tiny: 'h6',
+}
+
+export type FPSize = 'huge' | 'xlarge' | 'large' | 'medium' | 'small' | 'tiny';
+
+
 export const typography: Settings = {
   type: {
     display: '"FK Screamer", sans-serif',
