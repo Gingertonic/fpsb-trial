@@ -35,7 +35,7 @@ export const StyledLi = styled.li<LiItemProps>`
 
 `
 
-export const StyledList = styled.div`
+export const StyledNumList = styled.div`
     display: flex;
     flex-direction: column;
 `

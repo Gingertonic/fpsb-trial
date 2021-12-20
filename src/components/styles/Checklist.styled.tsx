@@ -28,7 +28,7 @@ export const StyledCheck = styled.div<CheckItemProps>`
 
 `
 
-export const StyledList = styled.div`
+export const StyledChecklist = styled.div`
     display: grid;
     grid-auto-columns: 1fr;
     grid-column-gap: 16px;

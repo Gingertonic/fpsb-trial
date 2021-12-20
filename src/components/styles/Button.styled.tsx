@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { colors, typography } from '../../styles/theme';
 import RightArrow from '../../assets/svgs/icons/right-arrow.svg';
 
-interface BtnProps {
+export interface StyledBtnProps {
     bg: string;
     text: string;
 }
 
-export const StyledButton = styled.button<BtnProps>`
+export const StyledButton = styled.button<StyledBtnProps>`
     display: flex;
     border: none;
     margin: 4px;
@@ -34,11 +34,11 @@ export const StyledButton = styled.button<BtnProps>`
 
 `
 
-interface ArrProps {
+export interface ArrProps {
     color: string
 }
 
-const ArrowWrapper = styled.div`
+export const ArrowWrapper = styled.div`
     margin-left: 8px;
     transform: translate3d(0px, 2px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
