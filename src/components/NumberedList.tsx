@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledLi, StyledList } from './styles/NumberedList.styled';
+import { StyledLi, StyledNumList } from './styles/NumberedList.styled';
 import { FPColorString } from '../styles/theme';
 
 export interface NumItemProps {
@@ -30,5 +30,5 @@ export const NumberedItem = ({ content, bullet, color='purple' }: NumItemProps) 
 export const NumberedList = ({ items, color='purple' }: NumListProps) => {
     const renderLis = items.map((text, idx) => <NumberedItem bullet={idx + 1} content={text} color={color} /> )
 
-    return <StyledList>{renderLis}</StyledList>
+    return <StyledNumList>{renderLis}</StyledNumList>
 }

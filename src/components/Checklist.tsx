@@ -1,6 +1,6 @@
 import React from 'react';
 import CheckMark from '../assets/svgs/icons/checkmark.svg';
-import { StyledCheck, StyledList } from './styles/Checklist.styled';
+import { StyledCheck, StyledChecklist } from './styles/Checklist.styled';
 import { FPColorString } from '../styles/theme';
 
 export interface ChecklistItemProps {
@@ -20,4 +20,4 @@ export const ChecklistItem = ({ label, color='purple' }: ChecklistItemProps) => 
 
 }
 
-export const Checklist = ({ children }: any) => <StyledList>{children}</StyledList>
+export const Checklist = ({ children }: any) => <StyledChecklist>{children}</StyledChecklist>
