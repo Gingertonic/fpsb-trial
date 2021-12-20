@@ -10,6 +10,10 @@
   "engines": {
     "node": ">=10"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/getfutureproof-projects/fpsb"
+  },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
@@ -35,8 +39,8 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "fpsb",
-  "author": "Gingertonic",
+  "name": "@getfutureproof/fpsb",
+  "author": "futureproof",
   "module": "dist/fpsb.esm.js",
   "size-limit": [
     {
