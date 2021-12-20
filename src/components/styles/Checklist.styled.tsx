@@ -7,7 +7,6 @@ interface ItemProps {
 
 export const StyledCheck = styled.div<ItemProps>`
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
     text-align: center;
     color: ${({ color }) => colors[color]};

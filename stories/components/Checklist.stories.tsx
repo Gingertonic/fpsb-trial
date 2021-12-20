@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react';
 import { Checklist, ChecklistItem, ItemProps } from "../../src/components/Checklist";
 
 const meta: Meta = {
-  title: "Components/Checklist",
+  title: "Components/Lists/Checklist",
   component: ChecklistItem
 };
 
