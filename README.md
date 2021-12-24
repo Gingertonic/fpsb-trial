@@ -49,7 +49,7 @@ ReactDOM.render(
 Included components come complete with their styling but if you'd like to go off-piste, some key values of futureproof branding eg. colour palette are available directly via the [theme](./src/styles/theme.ts)
 ```jsx
 // GreatComponent.jsx
-import { colors, typography } from "@getufutureproof/fpsb";
+import { colors, typography } from "@getfutureproof/fpsb";
 
 const GreatComponent = () => {
     const divStyles = {
@@ -74,7 +74,7 @@ See the [Storybook](https://main--61c08e2a6b3b4d003ade4a12.chromatic.com)) for m
 Buttons come in regular and inverted flavours
 ```jsx
 // GreatComponent.jsx
-import { Button } from "@getufutureproof/fpsb";
+import { Button } from "@getfutureproof/fpsb";
 
 const GreatComponent = () => {
     return (
@@ -93,7 +93,7 @@ const GreatComponent = () => {
 ### Heading
 ```jsx
 // GreatComponent.jsx
-import { Heading } from "@getufutureproof/fpsb";
+import { Heading } from "@getfutureproof/fpsb";
 
 const GreatComponent = () => {
     return (
@@ -119,7 +119,7 @@ They come as solids and as cut-out frames - put whatever you like behind them!
 #### Solid Shapes
 ```jsx
 // GreatComponent.jsx
-import { Shape } from "@getufutureproof/fpsb";
+import { Shape } from "@getfutureproof/fpsb";
 
 const GreatComponent = () => {
     return (
@@ -133,7 +133,7 @@ const GreatComponent = () => {
 #### Frame Shapes
 ```jsx
 // GreatComponent.jsx
-import { Frame } from "@getufutureproof/fpsb";
+import { Frame } from "@getfutureproof/fpsb";
 
 const GreatComponent = () => {
     return (
@@ -152,7 +152,7 @@ There are two basic List components
 #### Checklists
 ```jsx
 // GreatComponent.jsx
-import { Checklist, ChecklistItem } from "@getufutureproof/fpsb";
+import { Checklist, ChecklistItem } from "@getfutureproof/fpsb";
 
 const GreatComponent = () => {
     return (
@@ -170,7 +170,7 @@ const GreatComponent = () => {
 #### NumberedList
 ```jsx
 // GreatComponent.jsx
-import { NumberedList } from "@getufutureproof/fpsb";
+import { NumberedList } from "@getfutureproof/fpsb";
 
 const GreatComponent = () => {
     const coolThings = [
