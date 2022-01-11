@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Button, BtnProps } from '../../src/components/Button';
-import { colors, FPColorString } from '../../src/styles/theme';
+import { Button, BtnProps } from '../components/Button';
+import { colors, FPColorString } from '../styles/theme';
 
 const meta: Meta = {
     title: 'Components/Button',

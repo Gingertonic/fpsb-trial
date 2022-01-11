@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
-import { Shape } from '../../src/components/Shape';
+import { Shape } from '../components/Shape';
 
 const meta: Meta = {
     title: 'Components/Shapes/Solids',

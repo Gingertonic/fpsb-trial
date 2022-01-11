@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "1.2.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -10,16 +10,19 @@
   "engines": {
     "node": ">=10"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/getfutureproof-projects/fpsb"
+  },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
-    "size": "size-limit",
-    "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "chromatic"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -35,8 +38,8 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "fpsb",
-  "author": "Gingertonic",
+  "name": "@getfutureproof/fpsb",
+  "author": "futureproof",
   "module": "dist/fpsb.esm.js",
   "size-limit": [
     {
@@ -77,6 +80,8 @@
     "typescript": "^4.5.4"
   },
   "dependencies": {
+    "react-router": "^6.2.1",
+    "react-router-dom": "^6.2.1",
     "styled-components": "^5.3.3"
   }
 }

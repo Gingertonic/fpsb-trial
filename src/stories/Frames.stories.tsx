@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meta } from '@storybook/react';
-import { Frame } from '../../src/components/Frame';
+import { Frame } from '../components/Frame';
 
 const meta: Meta = {
     title: 'Components/Shapes/Frames',
