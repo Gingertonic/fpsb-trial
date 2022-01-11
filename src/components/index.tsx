@@ -4,5 +4,6 @@ export * from './Heading';
 export * from './Button';
 export * from './Shape';
 export * from './Frame';
+export * from './Header';
 
 export * from './styles';
