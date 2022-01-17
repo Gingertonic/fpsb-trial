@@ -5,5 +5,6 @@ export * from './Button';
 export * from './Shape';
 export * from './Frame';
 export * from './Header';
+export * from './Card';
 
 export * from './styles';
