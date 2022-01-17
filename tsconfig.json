@@ -1,6 +1,6 @@
 {
   // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
-  "include": ["src", "types", "src/stories", "src/components", "src/components/syles"],
+  "include": ["src", "types", "src/stories", "src/components", "src/components/styles", "src/components/styles/fonts"],
   "compilerOptions": {
     "module": "esnext",
     "lib": ["dom", "esnext"],

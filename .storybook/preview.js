@@ -1,12 +1,12 @@
 import React from 'react';
 import { GlobalStyle } from '../src/styles/Global';
-import { ThemeProvider } from 'styled-components';
-// import { addDecorator } from "@storybook/react";
+import { FontStyles } from '../src/styles/fonts';
 import { MemoryRouter } from "react-router";
 
 export const decorators = [
   Story => (
       <MemoryRouter>
+        <FontStyles />
         <GlobalStyle />
         <Story />
       </MemoryRouter>

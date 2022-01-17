@@ -20,7 +20,7 @@ export const StyledHeading = styled.h1<Props>`
     font-weight: ${typography.weight.regular};
     text-transform: uppercase;
     letter-spacing: 0em;
-    font-family: 'Fkscreamerlegacy upright', sans-serif;
+    font-family: ${typography.type.display};
   `}
   ${props => props.el === "h2" && css`
     font-size: ${typography.size.xlarge}px;
@@ -29,33 +29,36 @@ export const StyledHeading = styled.h1<Props>`
     font-weight: ${typography.weight.regular};
     text-transform: uppercase;
     letter-spacing: 0em;
-    font-family: 'Fkscreamerlegacy upright', sans-serif;
+    font-family: ${typography.type.display};
   `}
   ${props => props.el === "h3" && css`
-  font-size: ${typography.size.large}px;
-  line-height: ${typography.line.large}px;
-  margin-bottom: ${typography.margin.large}px;
-  font-weight: ${typography.weight.regular};
-  text-transform: uppercase;
-  letter-spacing: 0em;
-  font-family: 'Fkscreamerlegacy upright', sans-serif;
+    font-size: ${typography.size.large}px;
+    line-height: ${typography.line.large}px;
+    margin-bottom: ${typography.margin.large}px;
+    font-weight: ${typography.weight.regular};
+    text-transform: uppercase;
+    letter-spacing: 0em;
+    font-family: ${typography.type.display};
   `}
   ${props => props.el === "h4" && css`
     font-size: ${typography.size.medium}px;
     line-height: ${typography.line.medium}px;
     margin-bottom: ${typography.margin.medium}px;
     font-weight: ${typography.weight.regular};
+    font-family: ${typography.type.header};
   `}
   ${props => props.el === "h5" && css`
     font-size: ${typography.size.small}px;
     line-height: ${typography.line.small}px;
     margin-bottom: ${typography.margin.small}px;
     font-weight: ${typography.weight.regular};
+    font-family: ${typography.type.header};
   `}
   ${props => props.el === "h6" && css`
-  font-size: ${typography.size.tiny}px;
-  line-height: ${typography.line.tiny}px;
-  margin-bottom: ${typography.margin.tiny}px;
-  font-weight: ${typography.weight.regular};
+    font-size: ${typography.size.tiny}px;
+    line-height: ${typography.line.tiny}px;
+    margin-bottom: ${typography.margin.tiny}px;
+    font-weight: ${typography.weight.regular};
+    font-family: ${typography.type.header};
   `}
 `

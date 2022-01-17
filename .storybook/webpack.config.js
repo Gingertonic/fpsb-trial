@@ -20,5 +20,24 @@ module.exports = async ({ config, mode }) => {
         ]
     });
 
+    config.module.rules.push({
+        test: /\.(ttf|otf|woff|woff2)$/,
+        exclude: /node_modules/,
+        use: [
+            {
+                loader: 'file-loader',
+                query: {
+                    name: '[name].[ext]'
+                }
+            }
+        ]
+    })
+
+    // config.module.rules.push({
+    //     exclude: /node_modules/,
+    //     test: /\.(woff|woff2|eot|ttf|otf)$/i,
+    //     type: 'asset/resource'
+    // })
+
     return config;
 };

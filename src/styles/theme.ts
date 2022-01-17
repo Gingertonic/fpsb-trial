@@ -43,10 +43,11 @@ export const sizes: Settings = {
 
 export const typography: Settings = {
   type: {
-    display: '"FK Screamer", sans-serif',
-    header: '"Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
-    body: '"Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif',
-    code: '"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace',
+    display: '"FKScreamerS3", sans-serif',
+    header: '"WorkSansS3", "Helvetica Neue", Helvetica, Arial, sans-serif',
+    body: '"WorkSansS3", "Helvetica Neue", Helvetica, Arial, sans-serif',
+    italic: '"WorkSansS3", "Helvetica Neue", Helvetica, Arial, sans-serif',
+    code: '"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace'
   },
   weight: {
     regular: '400',
