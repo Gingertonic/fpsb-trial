@@ -7,5 +7,6 @@ export * from './Frame';
 export * from './Header';
 export * from './Card';
 export * from './Section';
+export * from './Footer';
 
 export * from './styles';
