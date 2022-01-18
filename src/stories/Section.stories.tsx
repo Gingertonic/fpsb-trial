@@ -31,7 +31,7 @@ export const Colorways = () => {
         <>
         <div id="default">
             <h2>Backgrounds</h2>
-            { colorOpts.map((c, i) => <Section key={i} bgColor={c} />) }
+            { colorOpts.map((c, i) => <Section key={i} border bgColor={c} />) }
         </div>
         </>
     )

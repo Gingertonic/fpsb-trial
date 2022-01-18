@@ -12,6 +12,8 @@ export const dirMap = {
 export interface SectionProps extends HTMLAttributes<HTMLDivElement> {
     /** Select color */
     bgColor?: FPColorString;
+    /** Add border */
+    border: boolean;
     /** Select direction (ttb: top to bottom etc) */
     direction?: 'ttb' | 'btt' | 'ltr' | 'rtl';
     /** Select content alignment */
@@ -20,8 +22,8 @@ export interface SectionProps extends HTMLAttributes<HTMLDivElement> {
 
 export const StyledSection = styled.section<SectionProps>`
     background-color: ${({ bgColor }) => bgColor ? colors[bgColor] : 'white' };
-    border-top: ${({ bgColor }) => bgColor === 'white' ? "2px solid " + colors.purple : "none"};
-    border-bottom: ${({ bgColor }) => bgColor === 'white' ? "2px solid " + colors.purple : "none"};
+    border-top: ${({ border }) => border ? "2px solid " + colors.purple : "none"};
+    border-bottom: ${({ border }) => border ? "2px solid " + colors.purple : "none"};
     color: ${({ bgColor }) => bgColor === 'purple' ? "white" : colors.purple};
     min-height: 100px;
     display: flex;
@@ -40,9 +42,9 @@ export const demoContent = () => (
     </>
 )
 
-export const Section = ({ children, bgColor="white", direction="ttb", justifyContent='space-around' }: SectionProps): JSX.Element => {
+export const Section = ({ children, bgColor="white", direction="ttb", justifyContent='space-around', border=false }: SectionProps): JSX.Element => {
     return (
-        <StyledSection bgColor={bgColor} direction={direction} justifyContent={justifyContent}>
+        <StyledSection bgColor={bgColor} direction={direction} justifyContent={justifyContent} border={border}>
             { children || demoContent() }
         </StyledSection>
     )
