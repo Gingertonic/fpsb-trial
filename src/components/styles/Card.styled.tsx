@@ -7,12 +7,14 @@ export interface StyledCardProps {
     text: string;
     shadow: boolean;
     width: string;
+    hover: boolean;
+    onClick?: React.MouseEventHandler | null;
 }
 
 export const StyledCard = styled.div<StyledCardProps>`
     margin: 20px;
     background-color: ${({ bg }) => colors[bg]};
-    box-shadow: ${({ shadow, text }) => shadow ? ("-10px 10px " + colors[text]): "none" };
+    box-shadow: ${({ shadow, bg }) => shadow ? ("-10px 10px " + colors[bg]): "none" };
     color: ${({ text }) => colors[text]};
     text-align: left;
     font-weight: 500;
@@ -22,10 +24,17 @@ export const StyledCard = styled.div<StyledCardProps>`
     padding: ${({ width, variant }) => variant === 'square' ? (width + " 0 0 0") : '30px' };
     position: relative;
     display: inline-block;
+    border-style: solid;
+    border-width: ${({ shadow }) => shadow ? "0px 0px 2px 2px" : "0px"};
+    border-color: ${({ text }) => colors[text]};
 
     .card-content {
         position: absolute;
         box-sizing: border-box;
+
+        /* &:hover {
+            background-color: ${({ hover, bg, text }) => hover ? colors[text] : colors[bg]};
+        } */
     }
 
     .card-content.info {
@@ -57,5 +66,21 @@ export const StyledCard = styled.div<StyledCardProps>`
         box-sizing: border-box;
         font-family: ${typography.type.display};
         font-size: 2rem;
+    }
+
+    &:hover {
+        cursor: ${({ hover }) => hover ? 'pointer' : 'cursor'};
+        background-color: ${({ hover, bg, text }) => hover ? colors[text] : colors[bg]};
+
+        .card-content {
+            color: ${({ hover, bg, text }) => hover ? colors[bg] : colors[text]};
+            position: absolute;
+            box-sizing: border-box;
+        }
+
+        .card-title {
+            color: ${({ hover, bg, text }) => hover ? colors[text] : colors[bg]};
+            background-color: ${({ hover, bg, text }) => hover ? colors[bg] : colors[text]};
+        }
     }
 `;

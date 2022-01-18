@@ -20,7 +20,7 @@ Info.args = {
     variant: 'info',
     colorway: 'lemon',
     width: '25%',
-    children: "Info Card"
+    children: "Info Card",
 };
 
 Inverted.args = {
@@ -28,7 +28,7 @@ Inverted.args = {
     colorway: 'lemon',
     inverted: true,
     width: '20vw',
-    children: "Inverted Card"
+    children: "Inverted Card",
 };
 
 Square.args = {
@@ -36,7 +36,9 @@ Square.args = {
     title: 'Lytical',
     colorway: 'lemon',
     width: '200px',
-    children: "Graduating in 3 months on April 8th 2022"
+    children: "Graduating in 3 months on April 8th 2022",
+    hoverEffect: true,
+    onClick: () => alert('hai')
 };
 
 
@@ -71,13 +73,13 @@ export const Variations = () => {
         </div>
 
         <div id="squares-shadows">
-            <h2>Squares with Shadows</h2>
-            { colorOpts.map((c, i) => <Card key={i} title="Card Title" variant="square" shadow colorway={c} />) }
+            <h2>Squares with Shadows & opt. Hover Effect</h2>
+            { colorOpts.map((c, i) => <Card key={i} title="Card Title" variant="square" shadow hoverEffect colorway={c} />) }
         </div>
         
         <div id="squares-shadows-inverted">
-            <h2>Inverted Squares with Shadows</h2>
-            { colorOpts.map((c, i) => <Card key={i} title="Card Title" variant="square" shadow inverted colorway={c} />) }
+            <h2>Inverted Squares with Shadows & opt. Hover Effect</h2>
+            { colorOpts.map((c, i) => <Card key={i} title="Card Title" variant="square" shadow hoverEffect inverted colorway={c} />) }
         </div>
         </>
     )

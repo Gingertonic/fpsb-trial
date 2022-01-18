@@ -17,17 +17,21 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
     shadow?: boolean;
     /** Set title text - only on 'square' variant */
     title?: string;
+    /** Enable hover effect */
+    hoverEffect?: boolean;
+    /** Click action */
+    onClick?: React.MouseEventHandler | undefined;
 }
 
-export const Card = ({ children, variant='info', width='15vw', inverted=false, shadow=false, colorway='purple', title }: CardProps): JSX.Element => {
+export const Card = ({ children, variant='info', width='15vw', inverted=false, shadow=false, hoverEffect=false, colorway='purple', onClick, title }: CardProps): JSX.Element => {
     let isDefault: boolean = colorway === 'purple';
     let contrast: FPColorString = isDefault ? 'white' : colorway;
     let bgColor: FPColorString = inverted ? contrast : 'purple';
     let textColor: FPColorString = inverted ? 'purple' : contrast;  
 
     return (
-        <StyledCard variant={variant} bg={bgColor} text={textColor} shadow={shadow} width={width}>
-            { variant === 'square' && title && <div className='card-title' color={textColor}>{title}</div>}
+        <StyledCard onClick={onClick} variant={variant} bg={bgColor} text={textColor} shadow={shadow} width={width} hover={hoverEffect}>
+            { variant === 'square' && title && <div className='card-title'>{title}</div>}
             <div className={`${variant} card-content`}>
                 { children || 'This is a Card' }
             </div>
