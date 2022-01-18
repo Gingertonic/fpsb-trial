@@ -17,7 +17,8 @@ export const StyledButton = styled.button<StyledBtnProps>`
     background-color: ${({ bg }) => colors[bg]};
 
     .btn {
-        height: ${({ height }) => colors[height]};
+        /* height: ${({ height }) => colors[height]}; */
+        min-height: 48px;
         padding-right: 16px;
         padding-left: 16px;
         display: flex;
@@ -30,6 +31,7 @@ export const StyledButton = styled.button<StyledBtnProps>`
             font-weight: ${typography.weight.extrabold};
             font-size: 16px;
             line-height: 24px;
+            letter-spacing: -0.02em;
             color: ${({ text }) => colors[text]};
         }
     }
