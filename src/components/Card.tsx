@@ -23,14 +23,15 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
     onClick?: React.MouseEventHandler | undefined;
 }
 
-export const Card = ({ children, variant='info', width='15vw', inverted=false, shadow=false, hoverEffect=false, colorway='purple', onClick, title }: CardProps): JSX.Element => {
-    let isDefault: boolean = colorway === 'purple';
-    let contrast: FPColorString = isDefault ? 'white' : colorway;
-    let bgColor: FPColorString = inverted ? contrast : 'purple';
-    let textColor: FPColorString = inverted ? 'purple' : contrast;  
+export const Card = ({ children, variant='info', inverted=false, shadow=false, hoverEffect=false, colorway='violet', onClick, title, width }: CardProps): JSX.Element => {
+    let primary: FPColorString = inverted ? colorway : 'purple';
+    let contrast: FPColorString = inverted ? 'purple' : colorway;
+    if(!width){
+        width = variant === 'info' ? 'auto' : '200px';
+    }
 
     return (
-        <StyledCard onClick={onClick} variant={variant} bg={bgColor} text={textColor} shadow={shadow} width={width} hover={hoverEffect}>
+        <StyledCard onClick={onClick} variant={variant} primary={primary} inverted={inverted} contrast={contrast} shadow={shadow} width={width} hover={hoverEffect}>
             { variant === 'square' && title && <div className='card-title'>{title}</div>}
             <div className={`${variant} card-content`}>
                 { children || 'This is a Card' }

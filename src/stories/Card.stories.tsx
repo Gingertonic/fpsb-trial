@@ -68,8 +68,8 @@ export const Variations = () => {
         </div>
 
         <div id="squares">
-            <h2>Square</h2>
-            { colorOpts.map((c, i) => <Card key={i} title="Card Title" variant="square" colorway={c} />) }
+            <h2>Square & opt. Hover Effect</h2>
+            { colorOpts.map((c, i) => <Card key={i} title="Card Title" variant="square" hoverEffect colorway={c} />) }
         </div>
 
         <div id="squares-shadows">
