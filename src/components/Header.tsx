@@ -15,7 +15,7 @@ export const StyledHeader = styled.header`
         display: flex !important;
         margin-top: 20px;
         margin-bottom: 5px;
-        width: 100vw;
+        width: auto;
         padding: 0 calc((100vw - 1232px) / 2);
         position: relative;
         justify-content: space-between;
