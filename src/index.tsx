@@ -1,3 +1,2 @@
-export * from './styles/Global';
-export * from './styles/theme';
+export * from './styles/';
 export * from './components';
