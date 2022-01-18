@@ -13,7 +13,7 @@ export const colors: Settings = {
   coral: '#FF7999'
 };
 
-export type FPColorString = 'purple' | 'coral' | 'lime' | 'lemon' | 'violet';
+export type FPColorString = 'white' | 'purple' | 'coral' | 'lime' | 'lemon' | 'violet';
 export type FPShape = 'cog' | 'angles' | 'star' | 'shield';
 export type FPSize = 'huge' | 'xlarge' | 'large' | 'medium' | 'small' | 'tiny';
 

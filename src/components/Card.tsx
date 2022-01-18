@@ -10,22 +10,27 @@ export interface CardProps extends HTMLAttributes<HTMLButtonElement> {
     /** Choose contrast colour */
     colorway?: FPColorString;
     /** Choose card type */
-    variant?: 'info' | 'profile';
-    /** Set maxWidth */
-    maxWidth?: string;
-    /** Set if card has shadow */
+    variant?: 'info' | 'square';
+    /** Set width */
+    width?: string;
+    /** Add shadow */
     shadow?: boolean;
+    /** Set title text - only on 'square' variant */
+    title?: string;
 }
 
-export const Card = ({ children, variant='info', maxWidth='fit-content', inverted=false, shadow=false, colorway='purple' }: CardProps): JSX.Element => {
-    let isDefault = colorway === 'purple';
-    let contrast = isDefault ? 'white' : colorway;
-    let bgColor = inverted ? contrast : 'purple';
-    let textColor = inverted ? 'purple' : contrast;    
+export const Card = ({ children, variant='info', width='15vw', inverted=false, shadow=false, colorway='purple', title }: CardProps): JSX.Element => {
+    let isDefault: boolean = colorway === 'purple';
+    let contrast: FPColorString = isDefault ? 'white' : colorway;
+    let bgColor: FPColorString = inverted ? contrast : 'purple';
+    let textColor: FPColorString = inverted ? 'purple' : contrast;  
 
     return (
-        <StyledCard className={variant} bg={bgColor} text={textColor} shadow={shadow} maxWidth={maxWidth}>
-            { children || 'This is a Card' }
+        <StyledCard variant={variant} bg={bgColor} text={textColor} shadow={shadow} width={width}>
+            { variant === 'square' && title && <div className='card-title' color={textColor}>{title}</div>}
+            <div className={`${variant} card-content`}>
+                { children || 'This is a Card' }
+            </div>
         </StyledCard>
     )
 };

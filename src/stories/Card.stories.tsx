@@ -5,10 +5,7 @@ import { colors, FPColorString } from '../styles/theme';
 
 const meta: Meta = {
     title: 'Components/Card',
-    component: Card,
-    argTypes: {
-        label: { defaultValue: "Default" }
-    }
+    component: Card
 }
 
 export default meta;
@@ -17,40 +14,72 @@ const Template: Story<CardProps> = (args) => <Card {...args} />;
 
 export const Default = Template.bind({});
 export const Info = Template.bind({});
-export const Profile = Template.bind({});
+export const Inverted = Template.bind({});
+export const Square = Template.bind({});
 Info.args = {
     variant: 'info',
-    shadow: true,
-    inverted: true,
     colorway: 'lemon',
-    maxWidth: '30%',
+    width: '25%',
     children: "Info Card"
 };
-Profile.args = {
+
+Inverted.args = {
     variant: 'info',
-    shadow: true,
-    inverted: true,
     colorway: 'lemon',
-    maxWidth: '30%',
-    children: "Profile Card"
+    inverted: true,
+    width: '20vw',
+    children: "Inverted Card"
+};
+
+Square.args = {
+    variant: 'square',
+    title: 'Lytical',
+    colorway: 'lemon',
+    width: '200px',
+    children: "Graduating in 3 months on April 8th 2022"
 };
 
 
-// export const Colorways = () => {
-//     const colorOpts = Object.keys(colors).filter(c => c !== 'white').map(c => c as FPColorString);
+export const Variations = () => {
+    const colorOpts = Object.keys(colors).filter(c => c !== 'white' && c!=='purple').map(c => c as FPColorString);
 
-//     return (
-//         <>
-//         <div id="default">
-//             <h2>Defaults</h2>
-//             { colorOpts.map((c, i) => <Card key={i} colorway={c} label={`futureproof ${c}`} />) }
-//         </div>
+    return (
+        <>
+        <div id="default">
+            <h2>Defaults</h2>
+            { colorOpts.map((c, i) => <Card key={i} variant="info" colorway={c} />) }
+        </div>
 
-//         <div id="inverted">
-//             <h2>Inverted</h2>
-//             { colorOpts.map((c, i) => <Card key={i} inverted colorway={c} label={`futureproof ${c}`} />) }
-//         </div>
-//         </>
-//     )
-// };
+        <div id="inverted">
+            <h2>Inverted</h2>
+            { colorOpts.map((c, i) => <Card key={i} variant="info" inverted colorway={c} />) }
+        </div>
+
+        <div id="shadows">
+            <h2>With Shadow</h2>
+            { colorOpts.map((c, i) => <Card key={i} variant="info" shadow colorway={c} />) }
+        </div>
+
+        <div id="shadows-inverted">
+            <h2>Inverted with Shadow</h2>
+            { colorOpts.map((c, i) => <Card key={i} variant="info" inverted shadow colorway={c} />) }
+        </div>
+
+        <div id="squares">
+            <h2>Square</h2>
+            { colorOpts.map((c, i) => <Card key={i} title="Card Title" variant="square" colorway={c} />) }
+        </div>
+
+        <div id="squares-shadows">
+            <h2>Squares with Shadows</h2>
+            { colorOpts.map((c, i) => <Card key={i} title="Card Title" variant="square" shadow colorway={c} />) }
+        </div>
+        
+        <div id="squares-shadows-inverted">
+            <h2>Inverted Squares with Shadows</h2>
+            { colorOpts.map((c, i) => <Card key={i} title="Card Title" variant="square" shadow inverted colorway={c} />) }
+        </div>
+        </>
+    )
+};
 
