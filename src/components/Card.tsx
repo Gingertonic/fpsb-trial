@@ -4,7 +4,7 @@ import { StyledCard } from './styles/Card.styled';
 
 
 
-export interface CardProps extends HTMLAttributes<HTMLButtonElement> {
+export interface CardProps extends HTMLAttributes<HTMLDivElement> {
     /** Switch bg and text color */
     inverted?: boolean;
     /** Choose contrast colour */
