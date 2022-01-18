@@ -27,6 +27,7 @@ export const StyledSection = styled.section<SectionProps>`
     color: ${({ bgColor }) => bgColor === 'purple' ? "white" : colors.purple};
     min-height: 100px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: ${({ direction }) => direction ? dirMap[direction] : 'column'};
     justify-content: ${({ justifyContent }) => justifyContent};
     align-items: ${({ justifyContent }) => justifyContent};
