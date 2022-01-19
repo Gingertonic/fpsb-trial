@@ -35,21 +35,28 @@ export const StyledCard = styled.div<StyledCardProps>`
     border-width: ${({ shadow, hover }) => shadow && hover ? "0 0 0 3px" : "0"};
     border-color: ${({ contrast }) => colors[contrast]};
 
+    .card-content {
+        padding: 10px 15px;
+        top: 0;
+        left: 0;
+        letter-spacing: -0.02em;
+    }
+
     .card-content.info {
         position: relative;
         font-weight: 500;
-        top: 0;
-        left: 0;
-        padding: 10px 15px;
+        /* top: 0;
+        left: 0; */
+        /* padding: 10px 15px; */
         /* transform: translate(-20%, -50%); */
     }
 
     .card-content.square, .card-content.image {
         position: absolute;
         font-weight: 400;
-        top: 0;
-        left: 0;
-        padding: 10px 15px;
+        /* top: 0;
+        left: 0; */
+        /* padding: 10px 15px; */
         width: 100%; 
         height: 100%;
         color: ${({inverted}) => inverted ? colors.purple : colors.white};
