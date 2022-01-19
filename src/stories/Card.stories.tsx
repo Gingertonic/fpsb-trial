@@ -16,6 +16,7 @@ export const Default = Template.bind({});
 export const Info = Template.bind({});
 export const Square = Template.bind({});
 export const Image = Template.bind({});
+export const ImageError = Template.bind({});
 Info.args = {
     variant: 'info',
     colorway: 'lemon',
@@ -38,6 +39,15 @@ Image.args = {
     title: 'Anna Lytical',
     width: '200px',
     image: 'https://futureproof-public-documents.s3.eu-west-2.amazonaws.com/lytical/avatar.jpeg',
+    hoverEffect: true,
+    onClick: () => console.log('Opening modal')
+};
+
+ImageError.args = {
+    variant: 'image',
+    title: 'Anna Lytical',
+    width: '200px',
+    image: 'notanimg.png',
     hoverEffect: true,
     onClick: () => console.log('Opening modal')
 };

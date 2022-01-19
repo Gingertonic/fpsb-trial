@@ -1,6 +1,7 @@
-import React, { HTMLAttributes } from 'react';
+import React, { HTMLAttributes, SyntheticEvent } from 'react';
 import { FPColorString } from '../styles/theme';
 import { StyledCard } from './styles/Card.styled';
+import { PLACEHOLDER } from '../consts';
 
 
 
@@ -34,13 +35,15 @@ export const Card = ({ children, variant='info', inverted=false, shadow=false, h
         width = variant === 'info' ? 'auto' : '200px';
     }
 
+
+
     return (
         <StyledCard onClick={onClick} variant={variant} primary={primary} inverted={inverted} accent={accent} contrast={contrast} shadow={shadow} width={width} hover={hoverEffect}>
             { title && <div className={`${variant} card-title`}>{title}</div>}
             <div className={`${variant} card-content`}>
                 { variant === 'image' ? 
-                    <img src={image} alt={title || 'A futureproof image'} />
-                    : (children || "This is a card") }
+                    <img src={image} alt={title || 'A futureproof image'} onError={(e: SyntheticEvent<HTMLImageElement, Event>) => (e.target as HTMLImageElement).src = PLACEHOLDER} />
+                    : (children || "This is a card") } 
             </div>
         </StyledCard>
     )
