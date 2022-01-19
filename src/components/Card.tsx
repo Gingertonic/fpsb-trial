@@ -9,21 +9,25 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
     inverted?: boolean;
     /** Choose contrast colour */
     colorway?: FPColorString;
+    /** Choose accent colour */
+    accent?: FPColorString;
     /** Choose card type */
-    variant?: 'info' | 'square';
+    variant?: 'info' | 'square' | 'image';
     /** Set width */
     width?: string;
     /** Add shadow */
     shadow?: boolean;
     /** Set title text - only on 'square' variant */
     title?: string;
+    /** Add image (pass url) - only on 'image' variant*/
+    image?: string;
     /** Enable hover effect */
     hoverEffect?: boolean;
     /** Click action */
     onClick?: React.MouseEventHandler | undefined;
 }
 
-export const Card = ({ children, variant='info', inverted=false, shadow=false, hoverEffect=false, colorway='violet', onClick, title, width }: CardProps): JSX.Element => {
+export const Card = ({ children, variant='info', inverted=false, shadow=false, hoverEffect=false, colorway='violet', accent='coral', onClick, title, width, image }: CardProps): JSX.Element => {
     let primary: FPColorString = inverted ? colorway : 'purple';
     let contrast: FPColorString = inverted ? 'purple' : colorway;
     if(!width){
@@ -31,10 +35,12 @@ export const Card = ({ children, variant='info', inverted=false, shadow=false, h
     }
 
     return (
-        <StyledCard onClick={onClick} variant={variant} primary={primary} inverted={inverted} contrast={contrast} shadow={shadow} width={width} hover={hoverEffect}>
-            { variant === 'square' && title && <div className='card-title'>{title}</div>}
+        <StyledCard onClick={onClick} variant={variant} primary={primary} inverted={inverted} accent={accent} contrast={contrast} shadow={shadow} width={width} hover={hoverEffect}>
+            { title && <div className={`${variant} card-title`}>{title}</div>}
             <div className={`${variant} card-content`}>
-                { children || 'This is a Card' }
+                { variant === 'image' ? 
+                    <img src={image} alt={title || 'A futureproof image'} />
+                    : (children || "This is a card") }
             </div>
         </StyledCard>
     )

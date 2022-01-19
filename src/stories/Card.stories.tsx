@@ -14,21 +14,13 @@ const Template: Story<CardProps> = (args) => <Card {...args} />;
 
 export const Default = Template.bind({});
 export const Info = Template.bind({});
-export const Inverted = Template.bind({});
 export const Square = Template.bind({});
+export const Image = Template.bind({});
 Info.args = {
     variant: 'info',
     colorway: 'lemon',
     width: '25%',
     children: "Info Card",
-};
-
-Inverted.args = {
-    variant: 'info',
-    colorway: 'lemon',
-    inverted: true,
-    width: '20vw',
-    children: "Inverted Card",
 };
 
 Square.args = {
@@ -38,7 +30,16 @@ Square.args = {
     width: '200px',
     children: "Graduating in 3 months on April 8th 2022",
     hoverEffect: true,
-    onClick: () => alert('hai')
+    onClick: () => console.log('I was clicked')
+};
+
+Image.args = {
+    variant: 'image',
+    title: 'Anna Lytical',
+    width: '200px',
+    image: 'https://futureproof-public-documents.s3.eu-west-2.amazonaws.com/lytical/avatar.jpeg',
+    hoverEffect: true,
+    onClick: () => console.log('Opening modal')
 };
 
 

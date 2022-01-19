@@ -5,6 +5,7 @@ export interface StyledCardProps {
     variant: string;
     primary: string;
     contrast: string;
+    accent: string;
     inverted: boolean;
     shadow: boolean;
     width: string;
@@ -27,7 +28,7 @@ export const StyledCard = styled.div<StyledCardProps>`
     font-family: ${typography.type.body};
     width: ${({ width }) => width};
     min-width: 100px;
-    padding: ${({ width, variant }) => variant === 'square' ? (width + " 0 0 0") : '0' };
+    padding: ${({ width, variant }) => variant !== 'info' ? (width + " 0 0 0") : '0' };
     position: relative;
     display: inline-block;
     border-style: solid;
@@ -43,7 +44,7 @@ export const StyledCard = styled.div<StyledCardProps>`
         /* transform: translate(-20%, -50%); */
     }
 
-    .card-content.square {
+    .card-content.square, .card-content.image {
         position: absolute;
         font-weight: 400;
         top: 0;
@@ -55,16 +56,42 @@ export const StyledCard = styled.div<StyledCardProps>`
         /* transform: translate(-20%, -10%); */
     }
 
+    .card-content.image {
+        img {
+            height: ${({ width }) => width};
+            width: auto;
+            transform: translate(-5px, -30px);
+            border: ${({ accent }) => "10px solid " + colors[accent] };
+            /* opacity: 0.8;
+
+            &:hover {
+                opacity: 1;
+            } */
+        }
+    }
+
     .card-title {
+        z-index: 10;
         position: absolute;
-        bottom: 0;
-        /* opacity: 0.4; */
         background-color: ${({ contrast }) => colors[contrast]};
         color: ${({ inverted, primary }) => inverted ? colors.white : colors[primary]};
         width: 100%;
         padding: 10px;
         font-family: ${typography.type.display};
         font-size: 2rem;
+    }
+
+    .card-title.info {
+        position: relative;
+    }
+
+    .card-title.square {
+        bottom: 0;
+    }
+
+    .card-title.image {
+        bottom: -10px;
+        left: -10px;
     }
 
     &:hover {
