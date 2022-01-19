@@ -24,11 +24,13 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
     image?: string;
     /** Enable hover effect */
     hoverEffect?: boolean;
+    /** Updates cursor */
+    clickable?: boolean;
     /** Click action */
     onClick?: React.MouseEventHandler | undefined;
 }
 
-export const Card = ({ children, variant='info', inverted=false, shadow=false, hoverEffect=false, colorway='violet', accent='coral', onClick, title, width, image }: CardProps): JSX.Element => {
+export const Card = ({ children, variant='info', inverted=false, shadow=false, hoverEffect=false, clickable=false, colorway='violet', accent='coral', onClick, title, width, image}: CardProps): JSX.Element => {
     let primary: FPColorString = inverted ? colorway : 'purple';
     let contrast: FPColorString = inverted ? 'purple' : colorway;
     if(!width){
@@ -38,7 +40,7 @@ export const Card = ({ children, variant='info', inverted=false, shadow=false, h
 
 
     return (
-        <StyledCard onClick={onClick} variant={variant} primary={primary} inverted={inverted} accent={accent} contrast={contrast} shadow={shadow} width={width} hover={hoverEffect}>
+        <StyledCard onClick={onClick} variant={variant} primary={primary} inverted={inverted} accent={accent} contrast={contrast} shadow={shadow} width={width} hover={hoverEffect} clickable={clickable}>
             { title && <div className={`${variant} card-title`}>{title}</div>}
             <div className={`${variant} card-content`}>
                 { variant === 'image' ? 

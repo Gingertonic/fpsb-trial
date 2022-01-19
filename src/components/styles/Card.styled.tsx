@@ -10,6 +10,7 @@ export interface StyledCardProps {
     shadow: boolean;
     width: string;
     hover: boolean;
+    clickable: boolean;
     onClick?: React.MouseEventHandler | null;
 }
 
@@ -102,7 +103,7 @@ export const StyledCard = styled.div<StyledCardProps>`
     }
 
     &:hover {
-        cursor: ${({ hover }) => hover ? 'pointer' : 'cursor'};
+        cursor: ${({ hover, clickable }) => hover || clickable ? 'pointer' : 'default'};
         border-width: ${({ hover }) => hover ? "0 0 0 4px" : "0"};
     }
 `;
