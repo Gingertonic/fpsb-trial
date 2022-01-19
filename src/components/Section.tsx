@@ -18,6 +18,10 @@ export interface SectionProps extends HTMLAttributes<HTMLDivElement> {
     direction?: 'ttb' | 'btt' | 'ltr' | 'rtl';
     /** Select content alignment */
     justifyContent?: 'space-around' | 'space-between' | 'start' | 'end' | 'center';
+    /** Reduce inner container width */
+    innerMax?: string;
+    /** Set inner container display */
+    display?: 'flex' | 'grid';
 }
 
 export const StyledSection = styled.section<SectionProps>`
@@ -34,7 +38,11 @@ export const StyledSection = styled.section<SectionProps>`
     padding: 30px;
     width: 100%;
     box-sizing: border-box;
-    `
+
+    .section-content {
+        max-width: ${({ innerMax }) => innerMax };
+    }
+`
 
 export const demoContent = () => (
     <>
@@ -43,10 +51,10 @@ export const demoContent = () => (
     </>
 )
 
-export const Section = ({ children, bgColor="white", direction="ttb", justifyContent='space-around', border=false }: SectionProps): JSX.Element => {
+export const Section = ({ children, bgColor="white", direction="ttb", justifyContent='space-around', border=false, display='flex', innerMax='1232px' }: SectionProps): JSX.Element => {
     return (
-        <StyledSection bgColor={bgColor} direction={direction} justifyContent={justifyContent} border={border}>
-            { children || demoContent() }
+        <StyledSection bgColor={bgColor} direction={direction} justifyContent={justifyContent} border={border} innerMax={innerMax}>
+            <div className={`section-content ${display}`}>{ children || demoContent() }</div>
         </StyledSection>
     )
 };

@@ -10,7 +10,7 @@ export const StyledFooter = styled.footer`
     bottom: 0%;
     width: 100vw;
     background-color: rgba(255, 255, 255, 0.5);
-    z-index: 6;
+    z-index: 60;
         
     a,
     a:visited,
