@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { DEVICE, LOGO } from '../consts';
+import { DEVICE, LOGO, LOGO_TRANS_WHITE } from '../consts';
 
 
 export interface HeaderProps {
@@ -9,6 +9,8 @@ export interface HeaderProps {
     imgUrl?: string;
     /** Image alt text*/
     altText?: string;
+    /** Invert logo colours */
+    inverted?: boolean
 }
 
 export const StyledHeader = styled.header`
@@ -60,7 +62,7 @@ export const StyledHeader = styled.header`
     }
 `
 
-export const Header = ({ imgUrl, altText }: HeaderProps) => {
+export const Header = ({ imgUrl, altText, inverted }: HeaderProps) => {
     const [ img, setImg ] = useState<string>();
     const navigate = useNavigate();
 
@@ -79,7 +81,7 @@ export const Header = ({ imgUrl, altText }: HeaderProps) => {
             )}
 
             <a href='https://www.getfutureproof.co.uk/' target="_blank" rel="noopener">
-                <img id="logo" src={LOGO} alt="futureproof logo" />
+                <img id="logo" src={inverted ? LOGO : LOGO_TRANS_WHITE} alt="futureproof logo" />
             </a>
         </StyledHeader>
     )
