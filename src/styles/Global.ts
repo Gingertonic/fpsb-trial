@@ -17,6 +17,10 @@ export const normalize = css`
 export const GlobalStyle = createGlobalStyle`
    ${normalize}
 
+   * {
+     box-sizing: border-box;
+   }
+
     body {
         ${bodyStyles}
     }
